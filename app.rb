@@ -10,6 +10,11 @@ class App < Sinatra::Base
   get '/' do
     session["name"] = "Joch"
     @session = session
+    erb :index
+  end
+
+  post '/checkout' do
+    erb :checkout
   end
 
 end
